@@ -21,5 +21,8 @@ public interface IProductService {
 			//list products based on category
 			// sort products based on name
 			// sort products based on rating
+	// public Product getCostlierProducts(double price) throws ProductNotFoundException;
+	// public Product getProductByRating(int rating) throws ProductNotFoundException;
+	// public Product getProductByName(int name) throws ProductNotFoundException;
 
 }
