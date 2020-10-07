@@ -15,7 +15,8 @@ public class ProductRepository {
 	public ProductRepository() {
 		this.utils = new Utils();
 		productsList = new ArrayList<Product>();
-		productsList = this.utils.createProductListFromCsv("D:/sts/src/com/digisafari/util/products.csv", ",");
+		String filePath = new File("").getAbsolutePath();
+		productsList = this.utils.createProductListFromCsv(filePath + "/src/com/digisafari/util/products.csv", ",");
 		Product product = new Product();
 		product.setProductName("Rexona");
 		product.setCategory("Soap");
