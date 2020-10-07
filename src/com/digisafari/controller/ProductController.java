@@ -1,12 +1,15 @@
 package com.digisafari.controller;
 
 import com.digisafari.service.ProductService;
+import com.digisafari.model.Product;
+import com.digisafari.view.ProductView;
 
 public class ProductController {
   //
 
   ProductService productService;
   private ProductView view;
+private Product model;
 
   public ProductController(Product model, ProductView view) {
     this.model = model;
@@ -22,14 +25,22 @@ public class ProductController {
   }
 
   public void setProductCategory(String category) {
-    model.setProductCategory(category);
+    model.setCategory(category);
   }
 
   public String getProductCategory() {
-    return model.getProductCategory();
+    return model.getCategory();
   }
 
   public void updateView() {
-    view.printProductDetails(model.getName(), model.getCategory());
+    view.printProductDetails(getProductName(), getProductCategory(), getProductPrice(), getProductRating());
   }
+
+private double getProductRating() {
+	return model.getRating();
+}
+
+private double getProductPrice() {
+	return model.getPrice();
+}
 }

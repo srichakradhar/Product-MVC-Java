@@ -6,16 +6,18 @@ public class Product implements Comparable<Product> {
   String productName;
   double price;
   String category;
+  double rating;
 
   //no-arg constructor
-  Product() {}
+  public Product() {}
 
-  public Product(int id, String productName, double price, String category) {
+  public Product(int id, String productName, String category, double price, double rating) {
     super();
     this.id = id;
     this.productName = productName;
     this.price = price;
     this.category = category;
+    this.rating = rating;
   }
 
   //getter and setters
@@ -24,11 +26,19 @@ public class Product implements Comparable<Product> {
     return id;
   }
 
-  public void setld(int id) {
+  public void setId(int id) {
     this.id = id;
   }
 
-  public String getProductName() {
+  public double getRating() {
+	return rating;
+}
+
+public void setRating(double rating) {
+	this.rating = rating;
+}
+
+public String getProductName() {
     return productName;
   }
 
@@ -48,7 +58,7 @@ public class Product implements Comparable<Product> {
     return category;
   }
 
-  public void setCategory(string category) {
+  public void setCategory(String category) {
     this.category = category;
   }
 
